@@ -24,7 +24,6 @@
   h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 2px solid #e0a94a; padding-bottom: 4px; }
   .updated { color: #8a819e; font-size: 0.9em; margin-bottom: 2em; }
   .box { background: #f4eee0; border: 1px solid #e5dcc8; border-radius: 12px; padding: 16px 20px; margin: 20px 0; color: #2a2340; }
-  }
   table { width: 100%; border-collapse: collapse; margin: 12px 0; }
   th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5dcc8; }
   a { color: #7a4fd1; }
@@ -36,10 +35,10 @@
 <p style="font-size:0.9em;margin-bottom:1.5em;">🌐 <a href="privacy-policy-pl.html">Czytaj po polsku</a></p>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Idle Wizard Tower · Last updated: September 18, 2026</p>
+<p class="updated">Idle Wizard Tower · Last updated: September 23, 2026</p>
 
 <div class="box">
-<strong>In short:</strong> this game does not require an account and does not collect your name, email, phone number, or location. Your game progress is saved only locally on your device. We only collect anonymous usage statistics (e.g. which features are used) to improve the game.
+<strong>In short:</strong> this game has no login screen and does not collect your name, email, phone number, or location. Your game progress is saved only locally on your device. In the background, the app creates a silent anonymous device identifier (no personal information) to verify purchases and limit spam on problem reports. We only collect anonymous usage statistics (e.g. which features are used) to improve the game, plus whatever you choose to write if you use the "Report a Problem" feature. Ads and payments are handled by Google (AdMob / Google Play Billing) — before showing personalized ads to players in the EU/UK, we ask for consent through Google's own consent form, and you can change that choice anytime in Settings.
 </div>
 
 <h2>1. Who controls this data</h2>
@@ -50,9 +49,13 @@
 <tr><th>Type of data</th><th>Purpose</th><th>Where it goes</th></tr>
 <tr><td>Anonymous gameplay events (e.g. "session started", "chest opened", "achievement unlocked")</td><td>App usage analysis, improving the game</td><td>Google Firebase Analytics</td></tr>
 <tr><td>Basic device technical data (model, OS version, country) collected automatically by Firebase</td><td>Aggregate statistics, diagnostics</td><td>Google Firebase Analytics</td></tr>
+<tr><td>An anonymous device identifier, created automatically and silently through Firebase Anonymous Authentication (no login screen, no personal information involved)</td><td>Verifying in-app purchases and linking your problem reports to your device, so we can enforce a fair usage limit</td><td>Google Firebase</td></tr>
+<tr><td>If you use the "Report a Problem" feature: the message you write and up to 3 screenshots you choose to attach</td><td>Diagnosing and fixing the issue you reported</td><td>Google Firebase (Firestore database)</td></tr>
 </table>
+<p>Please avoid including personal information (your name, email, or anyone else's) in the text of a problem report — we do not ask for it and do not need it to help you.</p>
 
 <p><strong>What we do NOT collect:</strong> your name, email address, phone number, GPS location, contacts, photos, microphone, camera, or any data that would allow us to directly identify you as a person.</p>
+<p><strong>Legal basis (GDPR):</strong> we process this anonymous analytics data on the basis of our legitimate interest (Article 6(1)(f) GDPR) in optimizing and improving the stability of the game. Device IP addresses, even though briefly and automatically anonymized by Google before storage, are treated as personal data during that brief processing window — this is why a legal basis is stated here.</p>
 
 <h2>3. Game progress storage</h2>
 <p>Your progress (mana, creature collection, achievements, etc.) is saved <strong>only locally on your device</strong> — we do not send it to any servers. If you uninstall the app, your progress will be lost unless your device has Google's automatic backup enabled.</p>
@@ -61,16 +64,21 @@
 <p>With your consent, the app sends local notifications (e.g. a reminder that your Treasure Chest is ready). These notifications are generated and handled entirely on your device — they do not require sending any data externally. You can withdraw this consent at any time in your phone's system settings.</p>
 
 <h2>5. Ads and in-app purchases</h2>
-<p>The app offers optional in-app purchases and rewards for watching video ads. [FILL IN BEFORE PUBLISHING: once a real ad provider (e.g. Google AdMob) and payment system (Google Play Billing) are integrated, add information here about what data the ad provider collects — typically the device's advertising identifier (AAID) for ad personalization. Also link to AdMob's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.]</p>
+<p>The app offers optional in-app purchases and rewards for watching video ads, served through <strong>Google AdMob</strong>.</p>
+<p>We use third-party providers (such as Google AdMob) who may collect device identifiers (such as the Android Advertising ID) and IP addresses to personalize ads and measure their performance. This processing is based on your voluntary consent, which you can manage in the app's settings or your device's system settings.</p>
+<p>Before showing any personalized ad to a player from the European Economic Area (EEA), the United Kingdom, or Switzerland, the app displays a consent form through Google's User Messaging Platform (UMP), a consent management platform recognized under the IAB Transparency &amp; Consent Framework. If you do not consent, you will still see ads, but they will not be personalized. You can review and change your choice at any time from Settings → About → "Manage ad consent".</p>
+<p>All payments in the app are processed by Google Play. We do not collect, process, or have access to your payment details (such as credit card numbers). We only receive an anonymous confirmation of the transaction, needed to unlock the corresponding content in the game.</p>
+<p>Google's own privacy policy applies to data processed by AdMob and Google Play Billing: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
 
 <h2>6. Third-party services</h2>
 <p>The app uses <strong>Google Firebase</strong> (Google Analytics for Firebase) to collect anonymous usage statistics. Details: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
 <h2>7. Children</h2>
-<p>The app is not directed exclusively at children under 13 and does not knowingly collect personal data from children. [FILL IN BEFORE PUBLISHING: if the app is submitted to the Google Play Families program, this section must be expanded to comply with that program's requirements and applicable laws (COPPA/GDPR-K).]</p>
+<p>Our game is aimed at a general audience. When you first launch the app, we ask for your birth year through a neutral age screen. Since we cannot reliably determine which country a player is in from a birth year alone, we apply a single, deliberately strict threshold: any player who declares being under 16 years old is treated as a minor everywhere, even in countries where the legal digital consent age is lower. For these players, we automatically block the collection of advertising identifiers and show only non-personalized (contextual) ads — the Google User Messaging Platform (UMP) consent form described in Section 5 is never shown to them, since asking a minor for advertising consent would not be appropriate. If you are a parent and believe we have collected your child's data unlawfully, please contact us at idle.wizard.support@gmail.com.</p>
 
 <h2>8. Your rights</h2>
-<p>Because the app does not collect data that directly identifies you, most classic requests (access, deletion, data portability) have no technical point of reference — we have no way to link the anonymous statistics we collect to a specific person. If you still have a privacy question, please contact: idle.wizard.support@gmail.com.</p>
+<p>Because the app does not collect data that directly identifies you, most classic requests (access, deletion, data portability) have no technical point of reference — we have no way to link the anonymous statistics we collect to a specific person.</p>
+<p>You do, however, have the right to withdraw your consent for notifications or personalized ads at any time, from your device's system settings or from within the app (Settings → Notifications, and Settings → About → "Manage ad consent"). If you still have a privacy question, please contact: idle.wizard.support@gmail.com.</p>
 
 <h2>9. Changes to this policy</h2>
 <p>We may update this policy from time to time. The date of the last update is shown at the top of this page.</p>
@@ -79,7 +87,7 @@
 <p>Questions about this policy can be directed to: idle.wizard.support@gmail.com</p>
 
 <footer>
-This document is a starting-point draft, not legal advice. Before publishing the app, it's worth having it reviewed by a lawyer, especially sections 5 (ads/payments) and 7 (children), which need to be completed once real integrations are in place.
+&copy; 2026 Jakub Marczak. All rights reserved.
 </footer>
 
 </body>
